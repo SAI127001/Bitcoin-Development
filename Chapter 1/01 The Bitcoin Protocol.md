@@ -18,15 +18,15 @@ The aspects of invoicing and accounting records also are simplified if they don�
 
 Highlights of the difference between the two are :
 
-    • In place of multiple third parties (banking institutions, intermediary and settlement banks) we have only one third-party which is played by a number of competing nodes of the Bitcoin network reducing the number of hops (two or max 3) a transaction has to take to reach the intended recipient.
+In place of multiple third parties (banking institutions, intermediary and settlement banks) we have only one third-party which is played by a number of competing nodes of the Bitcoin network reducing the number of hops (two or max 3) a transaction has to take to reach the intended recipient.
 
-    • The customer (directly or via merchant) only has to send the transaction via his software to the node network to update on the Bitcoin ledger. Once updated in the ledger, the merchant owns the money so this simplifies the overall business process and again removes the reversibility of the transaction.
+The customer (directly or via merchant) only has to send the transaction via his software to the node network to update on the Bitcoin ledger. Once updated in the ledger, the merchant owns the money so this simplifies the overall business process and again removes the reversibility of the transaction.
 
-    • In place of user accounts and the various sets of the payment transaction and network, all coins are associated with a private/public key pair using ECDSA making it extremely secure.
+In place of user accounts and the various sets of the payment transaction and network, all coins are associated with a private/public key pair using ECDSA making it extremely secure.
 
-    • Transactions that are computationally impractical to reverse would protect sellers from fraud, and routine escrow mechanisms could easily be implemented to protect buyers.
+Transactions that are computationally impractical to reverse would protect sellers from fraud, and routine escrow mechanisms could easily be implemented to protect buyers.
 
-    • If there is a legal dispute due to which the transaction can become invalid, it would be possible to reverse the transaction but typically that will only happen for something that is ordered by a court of law and is significant in value due to the huge effort involved in it.
+If there is a legal dispute due to which the transaction can become invalid, it would be possible to reverse the transaction but typically that will only happen for something that is ordered by a court of law and is significant in value due to the huge effort involved in it.
 
 In addition to this, the ledger where the accounting entries are made (Bitcoin public ledger) is distributed across the globe via the network of nodes making it resilient to any single point of failure scenarios. This forms the central core of the Bitcoin network. The Bitcoin network will look like as shown in the graphic, where M are the mining nodes which are hyper connected with each other and U are the user nodes which are connected by their need to one or more mining nodes.
 
