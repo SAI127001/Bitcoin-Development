@@ -49,3 +49,16 @@ var HM1 = bsv.crypto.Hash.sha256(Buffer.from(M1)).toString('hex')
 console.log(HM1)
 // displays '71f1b520c2cf59baf9e29d29ea48bb2cb71f56d36157af37786a564b8108fc24'
 //Both HM and HM1 are completely different values as shown.
+
+Block and Transactions
+
+Each transaction once created, will have a hash generated for it using the SHA256 algorithm and this is how the content and a transaction looks like for transaction with Hash: 6aa23f574576a0f6b1d3734ea79712f2a016acac2be67ebc824ba0f82b89f186
+
+<img src="./assets/image-20201010-041219.webp"/>
+<h3 align="center">Graphic: A typical bitcoin transaction</h3>
+
+As you can see each transaction has some metadata for it (timestamp, confirmations, fee paid, block number) and then there are details of input and output for the transaction. All the data that belongs to the transaction is put through the SHA256 hash function (twice !!) and a 32 byte and 64-character length hash for the transaction is created. In a typical scenario, the network receives n number of transactions in a time period where the nodes in the network are trying to solve the Proof-of-work problem to find the next block hash and these nodes will in parallel create the block of transactions that they receive from various sources. These nodes will further do cascading hashing of transaction hash as well in a form of something called a Merkle tree.
+
+In cryptography and computer science, a hash tree or Merkle tree is a binary tree in which every leaf node is labelled with the hash of a data block. This is shown as the Hash (tx1), Hash (tx2) etc in the left graphic. Every non-leaf node is labelled with the cryptographic hash of the labels of its child nodes ex. as Hash 1-2 and Hash 3-4. Hash trees allow efficient and secure verification of the contents of large data structures.
+
+If there are an odd number of transactions, suppose there is no tx4, the hash 3-4 will just be the hash 3-3 by using tx3 hash twice and the same process applies. Demonstrating that a leaf node is a part of a given Merkle tree requires computing a number of hashes proportional to the logarithm of the number of leaf nodes of the tree. The right Graphic shows how the node will keep building a block as it keeps receiving new transactions by updating the Merkle tree root. All this data while kept on the higher abstraction of what is known as a Block.
