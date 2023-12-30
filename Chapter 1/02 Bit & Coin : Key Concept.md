@@ -62,3 +62,21 @@ As you can see each transaction has some metadata for it (timestamp, confirmatio
 In cryptography and computer science, a hash tree or Merkle tree is a binary tree in which every leaf node is labelled with the hash of a data block. This is shown as the Hash (tx1), Hash (tx2) etc in the left graphic. Every non-leaf node is labelled with the cryptographic hash of the labels of its child nodes ex. as Hash 1-2 and Hash 3-4. Hash trees allow efficient and secure verification of the contents of large data structures.
 
 If there are an odd number of transactions, suppose there is no tx4, the hash 3-4 will just be the hash 3-3 by using tx3 hash twice and the same process applies. Demonstrating that a leaf node is a part of a given Merkle tree requires computing a number of hashes proportional to the logarithm of the number of leaf nodes of the tree. The right Graphic shows how the node will keep building a block as it keeps receiving new transactions by updating the Merkle tree root. All this data while kept on the higher abstraction of what is known as a Block.
+
+<img src="./assets/BSVAcad-Dev_Chapter1-Image5.jpg"/>
+<h3 align="center">Graphic: A Merkle root hash representation for a block with 4 transactions (top) and a typical creation of a merkle root in a block (bottom)</h3>
+
+This merkle root acts as a checksum and even if a small character in a single transaction changes will break the integrity of this information and the change will render the block invalid and hence not accepted by consensus/validation process of nodes. The structure of a block looks like this.
+
+<img src="./assets/BSVAcad-Dev_Chapter1-Image6-updated.jpg"/>
+<h3 align="center">Graphic: Structure of a block</h3>
+
+Once the hash of the transactions are stored in a block with timestamp, it becomes a publicly stored record of truth which cannot be tampered with by any means. These blocks stored chained with each other acts as a timestamped server for the information stored in them. The nodes participating in the proof-of-work use computational power to generate a hash for the next block that they are competing to add to the existing chain of blocks. This new hash to be generated is controlled in terms of how complex it is to generate by one of the fields mentioned in the block header called nonce.
+
+Nodes use their computational power, continuously scanning for a value that when hashed, such as with SHA-256, the hash begins with a leading number of zero bits. The nonce defines these leading numbers of zero bits to control the difficulty of this process and is done by incrementing it in a block until a value is found that gives the block’s hash the required zero bits. The average work required is exponential in the number of zero bits required and can be verified by executing a single hash.
+
+The process of using a proof of work system to make a block ensures that the block cannot be changed once generated without redoing the same amount of computational work. You can also see that as there are more blocks chained after any block, the work to change said block will include changing all of these blocks that are chained as well and this way the work to alter the block increases exponentially as the depth of the block increases in the block chain.
+
+The last step in the selection of blocks involves a number of nodes coming to an agreement that the winning node’s block is what they all agree to add to the Bitcoin ledger by a network consensus proved by the winning node’s proof of work. All of the nodes who are investing their CPUs vote in this network consensus to decide on the majority decision for the next block addition and block winner among them by a consensus method described as Nakamoto consensus which is: “Proof-of-work is essentially one-CPU-one-vote”.
+
+They do it by taking the selected node’s block and start to build the next block hash using this node’s block. There is always a possibility that multiple nodes solve the hash puzzle at the same time and the single chain may have a fork happening from time to time. This automatically will resolve as the network will keep adding new blocks to one or the other fork and the majority of nodes decisions will be represented by the longest chain demonstrating greatest proof of work.
