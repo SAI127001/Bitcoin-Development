@@ -36,3 +36,16 @@ This is the Bit part of the Bitcoin network. Bit meaning information, is possibl
 Later on, if one of the parties tried to manipulate even a single character written in that contract, it will generate a completely new hash making it impossible for either of them to tamper with. And this record will be available at all times till the Bitcoin network exists, which means for an infinite possible timeframe from now. Such property of the usage of network allows for a plethora of utility of using this network for storing not just contracts, but also application database, legal documents, billing and invoicing and for that matter something as simple as weather data for immutable history archiving.
 
 Hashing of data plays an important function in this to act as checksum and ensure immutability for the underlying data, but still keeping the work to be done to do the verification quite trivial. This is demonstrated by a small example - by hashing a text explaining what is hash and then by changing a single character which is the first letter 'A' but keeping everything the same and displaying the two SHA256 hash values.
+
+    // node terminal, using BSV library
+
+const bsv = require ('bsv')
+var M = '“ A Hash is a cryptographic function with its unique property that it can transform a given input to a fixed number of alphanumeric strings. The input provided can be numeric, alphanumeric, media files, binary files. The output hash can be chosen to be 64-bit, 128-bit, 128-bit or 256-bit depending on the choice of the hash algorithm. Another unique property of this hash function is that it is a one way function, which means there is no way to generate the data if someone has the hash with them. This effectively means that even a one character change in the input data, can completely change the value of the hash output. These two unique properties enable the use of this hash function as a digital fingerprint for the data processed through the function. “ '
+var M1 = '“ Hash is a cryptographic function with its unique property that it can transform a given input to a fixed number of alphanumeric strings. The input provided can be numeric, alphanumeric, media files, binary files. The output hash can be chosen to be 64-bit, 128-bit, 128-bit or 256-bit depending on the choice of the hash algorithm. Another unique property of this hash function is that it is a one way function, which means there is no way to generate the data if someone has the hash with them. This effectively means that even a one character change in the input data, can completely change the value of the hash output. These two unique properties enable the use of this hash function as a digital fingerprint for the data processed through the function. “ '
+var HM = bsv.crypto.Hash.sha256(Buffer.from(M)).toString('hex')
+console.log(HM)
+// displays '664a9df50be3d1eb7afa0875e00fa998bd30d1ffe91a8fa7af8e213fd13a7444'
+var HM1 = bsv.crypto.Hash.sha256(Buffer.from(M1)).toString('hex')
+console.log(HM1)
+// displays '71f1b520c2cf59baf9e29d29ea48bb2cb71f56d36157af37786a564b8108fc24'
+//Both HM and HM1 are completely different values as shown.
