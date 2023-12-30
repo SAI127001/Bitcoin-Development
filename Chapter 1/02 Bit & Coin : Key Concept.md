@@ -92,3 +92,25 @@ The last bit about mining is the concept of Bits. This is a parameter which is u
 
 <img src="./assets/BSVAcad-Dev_Chapter1-Image8-updated.jpg"/>
 <h3 align="center">Graphic: Representational process of Block hash computation by nodes</h3>
+
+Bitcoin block is approximated to be added every 10 mins. For Bitcoin to work correctly it needs to be somewhere between five minutes and 20. The exact ideal optimal time is not calculable because it varies by time of day, season, use, electricity price and many other factors that are not standard. This 10 min time period was set primarily for introducing a sufficient amount of difficulty so that a minimum CPU power is invested to ensure the security of the network.
+
+There are few other attributes of bitcoin transactions and protocol which are quite important, they are known as nSequence and nLocktime. These are fields present in a transaction which acts as interlock which can be applied to these transactions.
+
+nLockTime is a parameter applied to each transaction specified in either unix time or block height, before which the transaction cannot be accepted into a block. If all inputs in a transaction have nSequence equal to UINT_MAX, then nLockTime is ignored.
+
+nSequence is a parameter applied to each input of a transaction. If a transaction's nLocktime is set to a point in the future, a transaction which has one or more inputs where nSequence is less than UINT_MAX (0xFFFFFFFF), then the transaction is not final and cannot be accepted into a block.
+
+These two attributes play an important role in creating transactions for complex use cases which will be discussed in a later chapter in detail. They play an important role also in creating things like payment channels, escrow, automated rule-based scripts and more which require methods to have multiple iterations of a transaction till the final state of that transaction is reached and is ready to be committed to Bitcoin’s immutable ledger.
+
+One last bit about transactions is “Script”. Script is a special language or a scripting system used in bitcoin transactions which acts as an instruction manual for transactions processing in bitcoin. It is quite important to understand script as everything in bitcoin transactions is executed by scripts. Script is very similar to a language called forth which was used historically for low level programming of microprocessors. It uses a concept of stack which is used for computing and uses words (similar to opcodes in script) for instruction sets. When a script is to be processed, the processor works using a stack for pushing the instructions in it and processes the script from left to right.
+
+Script as a language is a simple set of machine level instructions, which also means that it does not have all of the functionality that high level languages like C, C++, Java or Python has, like there are no loops possible in script. It is designed such a way for two main reasons:
+
+Processing power, or CPU needed to execute script is very thin, no to minimal compilation needed as the code is already machine level (almost)
+All of the scripts end or execute in a finite and predictable and limited amount of time as there are no loops
+During the validation of the transaction, the Transaction Input Script (which is the signature) is prefixed to the output script present in the previous transaction which created this UTXO. The Script processing happens and if the final conclusion of the processing is evaluated to be true the transaction validation is successful. If the script processing ends with False, it means that the transaction validation failed, and it will not be processed.
+
+A good analogy for how this works is that the output scripts are puzzles that specify in which conditions can those bitcoins be spent. The input scripts provide the correct data to make those output scripts evaluate to true. In the whitepaper, Satoshi Nakamoto dubbed the bitcoin script as it being a predicate, and this is the reason why is that so, its processing always ends in a result which is either true or false.
+
+There are a few important concepts which are explained quite comprehensively in the Bitcoin wiki (www.wiki.bitcoinsv.io) and students are recommended to go through these pages for better understanding.
