@@ -114,3 +114,9 @@ During the validation of the transaction, the Transaction Input Script (which is
 A good analogy for how this works is that the output scripts are puzzles that specify in which conditions can those bitcoins be spent. The input scripts provide the correct data to make those output scripts evaluate to true. In the whitepaper, Satoshi Nakamoto dubbed the bitcoin script as it being a predicate, and this is the reason why is that so, its processing always ends in a result which is either true or false.
 
 There are a few important concepts which are explained quite comprehensively in the Bitcoin wiki (www.wiki.bitcoinsv.io) and students are recommended to go through these pages for better understanding.
+
+Introduction to Bitcoin: https://wiki.bitcoinsv.io/index.php/Main_Page
+What is a transaction ID: https://wiki.bitcoinsv.io/index.php/Bitcoin_Transactions and https://wiki.bitcoinsv.io/index.php/TXID
+What is an ECDSA: https://wiki.bitcoinsv.io/index.php/Elliptic_Curve_Digital_Signature_Algorithm
+What is Private Key: https://wiki.bitcoinsv.io/index.php/Private_Keys
+What is an address or public key hash: https://wiki.bitcoinsv.io/index.php/Bitcoin_address and https://wiki.bitcoinsv.io/index.php/Technical_background_of_Bitcoin_addresses
