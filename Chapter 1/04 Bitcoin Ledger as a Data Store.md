@@ -12,3 +12,7 @@ It is an obvious question that will arise with the above explanation that if the
 
 <img src="./assets/BSVAcad-Dev_Chapter1-Image9.jpg"/>
 <h3 align="center">Identity in the Bitcoin World</h3>
+
+As the graphic shows, the transactions are firewalled from user identity, which provides privacy for users. This is quite an important concept, so the only way for anyone to be identified is if they publish their identity with a particular key pair which will make all transactions and the funds associated with that key pair public knowledge. In real world applications where businesses or individuals either will themselves or by their wallet software will break down their transaction data in such a manner that they are not able to be identified by their transaction volume or behaviour. This is done by for example breaking a transaction of 1 BSV transfer into 100 transactions of 0.01 BSV transfer with each transaction done by a new key pair of private and public key.
+
+The immensely low fee (typically 0.001-0.0001 cent per transaction) in the network enables this model of transaction execution. The other aspect of privacy is that each of these transactions are made using a new pair of private and public keys. This ensures that the only person who knows about the identity of the owner of these transactions and key pairs is either the owner himself or the intended recipient as this information typically will be included in the legal documentation like invoices and such.
