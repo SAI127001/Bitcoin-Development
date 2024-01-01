@@ -5,3 +5,5 @@ Infinite Database: Bitcoin ledger used for storing data can be used infinitely a
 Infinite universal spreadsheet: This is another way of looking at the universal public Bitcoin Ledger. Since everything recorded is a transaction between two parties, it is kind of a distributed global spreadsheet available to anyone who is willing to pay the tiny amount of fee to update it and has a window to view a subset or whole of it. It can also be thought of a global accounting book.
 
 Infinite Motor: If you see, Bitcoin is cyclic. It has an approximately 10 minutes cycle which the network keeps repeating. But each cycle is unique in its own way and its content which is made up of a selective history of the human interactions that are selected and logged into Bitcoin. It’s this property if we think further, we can think of Bitcoin as a perpetual rotating machine, an infinity motor, which (based on its algorithm) is capturing transactions by navigating in time and producing them as events.
+
+<img src="./assets/BSVAcad-Dev_Chapter1-Image10a.gif"/>
