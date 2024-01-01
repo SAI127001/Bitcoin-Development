@@ -28,3 +28,23 @@ State machines can be finite state machines (FSM) or infinite state machines dep
 
 <img src="./assets/BSVAcad-Dev_Chapter1-Image11-updated 1.jpg"/>
 <h3 align = "center">A generic state machine and its components</h3>
+
+Input: an event listener that listens to real time events/states from bitcoin
+
+Transition logic: Program that will handle the state change using CRUD operations API
+
+State Memory: A memory to persist the state attributes and updates
+
+Output Logic: An event producer that publishes custom programmable events for other modules and SSE
+
+A traffic light system can be taken as an example of an FSM. It contains three light bulbs which are red-green-yellow based on the current state and each state is dependent on the last state and follows a strict sequence of state change done by the event or input of the time clock.
+
+These state machines are heavily used in the world of Internet of things and using bitcoin based operating system which require minimal computing it is possible to build such machines.
+
+Infinite Tape: In computer science and computational theory, the idea of Turing machine and Turing completeness of machine is considered quite an important measure to attribute the capabilities of a certain machine. Turing in 1930 created an abstract model for a machine, hypothetical it may be, but can simulate any computer algorithm no matter how complex it is.
+
+As Turing wrote in The Undecidable, p. 128:
+
+It is possible to invent a single machine which can be used to compute any computable sequence. If this machine U is supplied with the tape on the beginning of which is written the string of quintuples separated by semicolons of some computing machine M, then U will compute the same sequence as M.
+
+A graphic representation of such machine is shown below:
