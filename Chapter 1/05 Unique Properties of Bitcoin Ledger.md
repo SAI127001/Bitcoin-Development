@@ -48,3 +48,28 @@ As Turing wrote in The Undecidable, p. 128:
 It is possible to invent a single machine which can be used to compute any computable sequence. If this machine U is supplied with the tape on the beginning of which is written the string of quintuples separated by semicolons of some computing machine M, then U will compute the same sequence as M.
 
 A graphic representation of such machine is shown below:
+
+<img src="./assets/BSVAcad-Dev_Chapter1-Image11-updated 2.jpg"/>
+
+It consists of an infinitely long tape which acts as the memory in a typical computer, a head which can be positioned on the individual square which can read and write on the tape, one at a time (during Turing’s time, the head was imagined as a typewriter). The typewriter writes 1 or 0 on the tape one at a time and the same is for reading, which happens one at a time. The typewriter is programmed to perform the next step based on its current state and the inputs that it reads from the tape.
+
+Turing machines were the first general purpose model of a computer and a Universal Turing machine is conceptualised as a Turing machine which can simulate any computers of past, present and future hence having the capability to solve any computer algorithm.
+
+Extending it to computation, The Church-Turing thesis later proposed that any real-world computation can be translated into an equivalent computation involving a Turing machine. Typically, in a real-world scenario, this computation requires recursive functions. Languages which allow for recursive functions by looping are considered as having capability to perform any computation making them Turing complete but suffer from the well-known unresolved issue of halting problem. Halting problem is the problem of determining, from a description of an arbitrary computer program and an input, whether the program will finish running, or continue to run forever.
+
+Bitcoin does solve this issue quite elegantly, by breaking the system into two parts, One is the Tape and the program managing that tape. If we take the abstraction of Bitcoin as a Tape, it comes with the following properties of the “Tape”.
+
+The tape moves one direction: forward.
+Tape is for keeping track of work accomplished.
+Work may happen on-tape or off-tape.
+Work is publicly published, which allows anyone to easily verify the work themselves.
+Work can write back to the tape, but this is optional.
+By looking at Bitcoin as a never-ending tape that grows every ten minute or so, we can even view Bitcoin as a form of "tape".
+
+Second part is the bitcoin network which acts as the typewriter in the Turing machine. Bitcoin Script language allows for simple recursion using the method to unroll the loops in computation by its property of having two stacks. The Bitcoin scripting language is a stack-based language similar to Forth. There are two stacks known as the main stack and the alt stack. Script commands, known as ‘OP_CODEs’ operate on the values in the main stack, while the alt stack is used as an additional store of data.
+
+The language was deliberately designed to exclude looping constructs to avoid the possibility of DOS attacks, however the language has many features including commands to access and manage values within the main stack (for example, OP_PICK and OP_ROLL). The predicate logic system deployed in Bitcoin as a scripting language is equivalent to Wolfram’s (2,3) Turing Machine. With this insight, we see that Bitcoin is functionally a system that is known as a Total Turing Machine. The complete proof of this is out of scope of this course but the paper mentioned below is available for interested readers to explore further on how to create recursive computation using unrolling of loops in Bitcoin Script.
+
+Bitcoin: A Total Turing Machine by Craig S. Wright https://link.springer.com/chapter/10.1007/978-3-030-29516-5_18
+
+This property is extremely important and useful in building Turing complete machines using bitcoin at the back as a tape. In fact, this system enables creation of Oracles and Oracle Turing machines which have the need of infinite tape to function. These use cases will be out of scope for this course or chapter, but the idea here is to give you all a preview of what are the capabilities of this Bitcoin system and what are the possible use cases that can be built using this system.
