@@ -7,3 +7,13 @@ Infinite universal spreadsheet: This is another way of looking at the universal 
 Infinite Motor: If you see, Bitcoin is cyclic. It has an approximately 10 minutes cycle which the network keeps repeating. But each cycle is unique in its own way and its content which is made up of a selective history of the human interactions that are selected and logged into Bitcoin. It’s this property if we think further, we can think of Bitcoin as a perpetual rotating machine, an infinity motor, which (based on its algorithm) is capturing transactions by navigating in time and producing them as events.
 
 <img src="./assets/BSVAcad-Dev_Chapter1-Image10a.gif"/>
+
+This "motor" travels through time and collects all the events (transactions) that happen through each rotation and takes an immutable snapshot (a block). The rotation logic (Bitcoin's algorithm) is deterministic and secure (powered by Proof of Work), making it the perfectly stable piece of technology to power all kinds of useful machines.
+
+So now that we have established an abstraction, Bitcoin == Motor
+
+We can then think about how to build a machine with a motor (Bitcoin). But first, what exactly is a "machine"?
+
+A machine is a function. A machine takes the motor as the constant source of energy and transforms the energy into various forms that can be consumed by humans or other machines.
+
+Machine = F(Motor): You can create an infinite number of "machines" from a single reliable motor, which is Bitcoin.
