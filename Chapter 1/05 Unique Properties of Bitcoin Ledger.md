@@ -19,3 +19,9 @@ A machine is a function. A machine takes the motor as the constant source of ene
 Machine = F(Motor): You can create an infinite number of "machines" from a single reliable motor, which is Bitcoin.
 
 <img src="./assets/BSVAcad-Dev_Chapter1-Image10b.gif"/>
+
+This abstraction in turn can enable building Finite state machines and infinite state Machines on Bitcoin.
+
+State machines are quite extensively used in designing real life applications and are a mathematical model of computation which exist in a specific state at any given point in time. When the conditions or external input is changed, the state machines go from one state to another. Simple examples in real life are vending machines which dispense products when a certain number of coins are inserted or elevators which start moving when you step on the first step. State machine diagrams are widely used when designing software applications to create logical flow of defining rules of application behaviour using UML diagrams or such.
+
+State machines can be finite state machines (FSM) or infinite state machines depending on the design of the machine. Typically, most of the real-world applications are designed as FSM as they are in exactly one finite state at any given time. Figure below shows a generic state machine and the flow of various interactions between components. It is possible to build this complete system using bitcoin which we will see in later chapters.
