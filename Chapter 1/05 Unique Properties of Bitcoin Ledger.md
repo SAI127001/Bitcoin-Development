@@ -17,3 +17,5 @@ We can then think about how to build a machine with a motor (Bitcoin). But first
 A machine is a function. A machine takes the motor as the constant source of energy and transforms the energy into various forms that can be consumed by humans or other machines.
 
 Machine = F(Motor): You can create an infinite number of "machines" from a single reliable motor, which is Bitcoin.
+
+<img src="./assets/BSVAcad-Dev_Chapter1-Image10b.gif"/>
