@@ -14,14 +14,13 @@
    Building APIs which access data present on the blockchain/ledger.
    Building Event listeners for listening to specific data/identifiers in the bitcoin transactions.
    Building temporary databases which updates data from bitcoin in real time.
-   All of the above. 4.
+   All of the above.
+4. Can you build state machines on Bitcoin? (one correct selection necessary to proceed)
+   No, it is not possible to build state machines on Bitcoin.
+   Yes, it is possible to build state machines (Finite state machines and Infinite state machines) on bitcoin where transactions act as the events changing the state of the machine from previous state to the next state.
+   Yes, it is possible to build Finite state machines but not the Infinite state machines on bitcoin.
+   Yes, it is possible to build deterministic and non-deterministic finite state machines using Bitcoin Script.
 
-Can you build state machines on Bitcoin? (one correct selection necessary to proceed)
-No, it is not possible to build state machines on Bitcoin.
-Yes, it is possible to build state machines (Finite state machines and Infinite state machines) on bitcoin where transactions act as the events changing the state of the machine from previous state to the next state.
-Yes, it is possible to build Finite state machines but not the Infinite state machines on bitcoin.
-Yes, it is possible to build deterministic and non-deterministic finite state machines using Bitcoin Script. 5.
-
-Bitcoin Ledger satisfies the ACID properties of a Database. This statement is?
-True
-False
+5. Bitcoin Ledger satisfies the ACID properties of a Database. This statement is?
+   True
+   False
