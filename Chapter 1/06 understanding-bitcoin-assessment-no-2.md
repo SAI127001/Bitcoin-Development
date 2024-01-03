@@ -1,22 +1,20 @@
-1.
+1. What is Bitcoin Ledger analogous to when it comes to comparison to the existing Software applications?
+   It is analogous to the CPU which processes the data and code.
+   It is analogous to the databases which store the persisted data for an application.
+   It is analogous to the RAM which temporarily stores (remembers) everything currently running on a device.
+   None of the above.
 
-What is Bitcoin Ledger analogous to when it comes to comparison to the existing Software applications?
-It is analogous to the CPU which processes the data and code.
-It is analogous to the databases which store the persisted data for an application.
-It is analogous to the RAM which temporarily stores (remembers) everything currently running on a device.
-None of the above. 2.
+2. What is unique about the bitcoin privacy model?
+   Privacy is achieved when Identity is decoupled from transactions allowing privacy but not anonymity.
+   Privacy is achieved when Identity is decoupled from transactions allowing privacy and anonymity.
+   Privacy is achieved thru the decentralisation of nodes across the network.
+   Privacy is achieved by ECDSA (Elliptic curve digital signing algorithm).
 
-What is unique about the bitcoin privacy model?
-Privacy is achieved when Identity is decoupled from transactions allowing privacy but not anonymity.
-Privacy is achieved when Identity is decoupled from transactions allowing privacy and anonymity.
-Privacy is achieved thru the decentralisation of nodes across the network.
-Privacy is achieved by ECDSA (Elliptic curve digital signing algorithm). 3.
-
-What kind of infrastructure can be built to use bitcoin as a data store for Business applications?
-Building APIs which access data present on the blockchain/ledger.
-Building Event listeners for listening to specific data/identifiers in the bitcoin transactions.
-Building temporary databases which updates data from bitcoin in real time.
-All of the above. 4.
+3. What kind of infrastructure can be built to use bitcoin as a data store for Business applications?
+   Building APIs which access data present on the blockchain/ledger.
+   Building Event listeners for listening to specific data/identifiers in the bitcoin transactions.
+   Building temporary databases which updates data from bitcoin in real time.
+   All of the above. 4.
 
 Can you build state machines on Bitcoin? (one correct selection necessary to proceed)
 No, it is not possible to build state machines on Bitcoin.
