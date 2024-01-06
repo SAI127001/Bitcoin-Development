@@ -9,3 +9,6 @@ SPV is most useful for proving a payment happened. Especially when small value p
 Wallet clients typically provide not just key management but also transaction management capabilities. They will abstract most of the low-level functionality of building a transaction using the user keys and allow for a similar user experience that any payment wallet does. Once the transaction is created, the next step to this will be for the user to broadcast this transaction to the bitcoin network.
 
 This is done either by the user directly broadcasting the transaction (if using a SPV wallet) or the wallet service provider broadcasting it on the behalf of user. Typically, the wallet service provider will have a few selected nodes which they will broadcast these transactions to and then it is the responsibility of the node to propagate the transaction to the rest of the node network. One important concept to note here is that the node network typically are hyper connected with each other so the overall propagation of transactions happens quite quickly (milli seconds or less).
+
+<img src="./assets/BSVAcad-Dev_Chapter1-Image12.jpg"/>
+<h3 align="center">Graphic:User broadcasts transaction to a node, then the node propagates across the network</h3>
